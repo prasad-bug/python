@@ -1,11 +1,9 @@
 import random
-target = random.randint(1, 10)
-guess = None
-while guess != target:
-    guess = int(input("Guess a number between 1 and 10: "))
-    if guess < target:
-        print("Too low!")
-    elif guess > target:
-        print("Too high!")
-    else:
-        print("You guessed it!")
+
+number = random.randint(1, 10)  # Generate random number between 1 and 10
+guess = int(input("Guess the number between 1 and 10: "))
+
+while guess != number:
+    guess = int(input("Wrong guess. Try again: "))
+
+print("Correct! You guessed the number.")

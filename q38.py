@@ -1,8 +1,17 @@
-def transpose_matrix(matrix):
-    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+def transpose(matrix):
+    return [list(row) for row in zip(*matrix)]
 
-matrix = [[int(input(f"Matrix[{i}][{j}]: ")) for j in range(3)] for i in range(3)]
-transposed = transpose_matrix(matrix)
+# Example matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Find the transpose
+transposed_matrix = transpose(matrix)
+
+# Print the transposed matrix
 print("Transposed matrix:")
-for row in transposed:
+for row in transposed_matrix:
     print(row)

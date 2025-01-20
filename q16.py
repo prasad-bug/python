@@ -1,7 +1,7 @@
 base = float(input("Enter the base: "))
 exponent = int(input("Enter the exponent: "))
 result = 1
-for _ in range(abs(exponent)):
+for _ in range(exponent):
     result *= base
-result = result if exponent >= 0 else 1 / result
-print(f"The result of {base} raised to the power of {exponent} is: {result}")
+
+print(f"Result: {result}")

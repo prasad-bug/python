@@ -1,16 +1,12 @@
 def is_prime(num):
-    """Check if a number is a prime number."""
-    if num <= 1:
+    if num < 2:
         return False
-    for i in range(2, int(num**0.5) + 1):
+    for i in range(2, num):
         if num % i == 0:
             return False
     return True
 
-
 start = int(input("Enter the start of the range: "))
 end = int(input("Enter the end of the range: "))
-print(f"Prime numbers between {start} and {end}:")
-for num in range(start, end + 1):
-    if is_prime(num):
-        print(num, end=" ")
+prime = [i for i in range(start, end + 1) if is_prime(i)]
+print(prime)
